@@ -1,7 +1,15 @@
+"use client";
+import axios from "axios";
 export default function Home() {
   return (
     <div>
-      <h1>Auth</h1>
+      <h1
+        onClick={async () =>
+          await axios.post("/api/test/getTest", { content: "Holaa" })
+        }
+      >
+        Click
+      </h1>
     </div>
   );
 }
