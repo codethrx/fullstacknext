@@ -4,11 +4,12 @@ export default function Home() {
   return (
     <div>
       <h1
-        onClick={async () =>
-          await axios.post("/api/test/getTest", { content: "Holaa" })
-        }
+        onClick={async () => {
+          const r = await axios.gett("/api/posts/crud");
+          console.log(r);
+        }}
       >
-        Click
+        Click Me
       </h1>
     </div>
   );
